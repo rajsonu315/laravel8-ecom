@@ -153,6 +153,9 @@
                     </div>
                     <div class="shop_products">
                         <div class="row gy-4">
+
+
+                            @foreach ($product_get_id as $productall )
                             <div class="col-md-4 col-sm-6">
                                 <div class="single_toparrival">
                                     <div class="topariv_img">
@@ -177,7 +180,7 @@
                                         </a>
                                         <p>Fabric Accent Chair</p>
                                         <div class="price mb-1">
-                                            <span class="org_price">$45.00</span>
+                                            <span class="org_price"> {{$productall->product->product_price}}</span>
                                         </div>
                                         <div class="rating">
                                             <div class="d-flex align-items-center justify-content-start">
@@ -201,55 +204,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="single_toparrival">
-                                    <div class="topariv_img">
-                                        <img loading="lazy" src="assets/images/product10.jpg" alt="product">
-                                        <div class="adto_wish">
-                                            <i class="icon-heart"></i>
-                                        </div>
-                                        <div class="prod_soh">
-                                            <div class="adto_wish">
-                                                <i class="icon-heart"></i>
-                                            </div>
-                                            <div class="qk_view open_quickview">
-                                                <span><i class="las la-eye"></i></span>
-                                                Quick View
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="topariv_cont">
-                                        <a href="product-view.html">
-                                            <h4>PELAGIA Lounge</h4>
-                                        </a>
-                                        <p>Outdoor Modular Lounge
-                                        </p>
-                                        <div class="price mb-1">
-                                            <span class="org_price">$45.00</span>
-                                        </div>
-                                        <div class="rating">
-                                            <div class="d-flex align-items-center justify-content-start">
-                                                <div class="rating_star">
-                                                    <span><i class="las la-star"></i></span>
-                                                    <span><i class="las la-star"></i></span>
-                                                    <span><i class="las la-star"></i></span>
-                                                    <span><i class="las la-star"></i></span>
-                                                    <span><i class="las la-star"></i></span>
-                                                </div>
-                                                <p class="rating_count mb-0">(150)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="full_atc_btn">
-                                  <a href="{{route('product_view')}}" class="href">
-                                      <button>
-                                            <span class="me-1"><i class="icon-cart"></i></span>
-                                            add to cart
-                                        </button></a>
-                                    </div>
-                                </div>
-                            </div>
-                       
+
+                            @endforeach
+
+
                         </div>
                         <div class="pagination_wrp d-flex align-items-center justify-content-center mt-4">
                             <div class="single_paginat active">1</div>

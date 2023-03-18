@@ -56,7 +56,7 @@ Route::get('/forgot-password', [HomeController::class,'forgot_password'])->name(
 Route::get('/order-completed', [HomeController::class,'order_completed'])->name('order_completed');
 Route::get('/payment', [HomeController::class,'payment'])->name('payment');
 Route::get('/product-view', [HomeController::class,'product_view'])->name('product_view');
-Route::get('/shop-grid', [HomeController::class,'shop_grid'])->name('shop_grid');
+Route::get('/shop-grid/{id?}', [HomeController::class,'shop_grid'])->name('shop_grid');
 Route::get('/shopping-cart', [HomeController::class,'shopping_cart'])->name('shopping_cart');
 Route::get('/wish-list', [HomeController::class,'wish_list'])->name('wish_list');
 Route::get('/checkout', [HomeController::class,'checkout'])->name('checkout');

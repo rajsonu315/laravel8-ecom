@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Product;
+
 use Illuminate\Http\Request;
 
 
@@ -11,109 +13,154 @@ class HomeController extends Controller
     public function home(){
 
         $category = Category::where('status','1')->get();
+        $product = Product::get();
 
 
-        return view('frant.home',compact('category'));
+
+        return view('frant.home',compact('category','product'));
     }
 
     public function login(){
-        return view('frant.login');
+
+        $category = Category::where('status','1')->get();
+
+        return view('frant.login',compact('category'));
     }
 
     public function register(){
-        return view('frant.register');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.register',compact('category'));
     }
 
     public function account(){
-        return view('frant.account');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.account',compact('category'));
     }
 
 
 
 
     public function checkout(){
-        return view('frant.checkout');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.checkout',compact('category'));
     }
 
 
 
 
     public function account_manage_address(){
-        return view('frant.account-manage-address');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.account-manage-address',compact('category'));
     }
 
 
     public function account_my_reviews(){
-        return view('frant.account-my-reviews');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.account-my-reviews',compact('category'));
     }
 
 
     public function account_order_cancel(){
-        return view('frant.account-order-cancel');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.account-order-cancel',compact('category'));
     }
 
 
     public function account_order_details(){
-        return view('frant.account-order-details');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.account-order-details',compact('category'));
     }
 
 
     public function account_order_history(){
-        return view('frant.account-order-history');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.account-order-history',compact('category'));
     }
 
 
 
     public function account_profile_info(){
-        return view('frant.account-profile-info');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.account-profile-info',compact('category'));
     }
 
 
     public function account_review_details(){
-        return view('frant.account-review-details');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.account-review-details',compact('category'));
     }
 
     public function forgot_password(){
-        return view('frant.forgot-password');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.forgot-password',compact('category'));
     }
 
 
 
 
     public function order_completed(){
-        return view('frant.order-completed');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.order-completed',compact('category'));
     }
 
 
 
     public function payment(){
-        return view('frant.payment');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.payment',compact('category'));
     }
 
 
 
     public function product_view(){
-        return view('frant.product-view');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.product-view',compact('category'));
     }
 
 
 
-    public function shop_grid(){
+    public function shop_grid(Request  $request , $id){
+
+        $product_get_id = Category::with('Product')->find($request->id);
+
+        dd($product_get_id);
+
+
 
         $category = Category::where('status','1')->get();
 
-        return view('frant.shop-grid', compact('category'));
+        return view('frant.shop-grid', compact('category', 'product_get_id'));
+
+
     }
 
 
     public function shopping_cart(){
-        return view('frant.shopping-cart');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.shopping-cart',compact('category'));
     }
 
 
 
     public function wish_list(){
-        return view('frant.wish-list');
+        $category = Category::where('status','1')->get();
+
+        return view('frant.wish-list',compact('category'));
     }
 
 

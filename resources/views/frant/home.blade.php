@@ -123,9 +123,12 @@
                 </div>
             </div>
             <div class="product_slider_2">
+
+
+                @foreach ($product as $product_all )
                 <div class="single_toparrival">
                     <div class="topariv_img">
-                        <img loading="lazy" src="{{ asset('assets/images/parse.png') }}" alt="product">
+                        <img loading="lazy" src="{{asset('/upload/'.$product_all->product_image)}}" alt="product">
                         <div class="prod_soh">
                             <div class="adto_wish">
                                 <i class="icon-heart"></i>
@@ -138,10 +141,10 @@
                     </div>
                     <div class="topariv_cont">
                         <a href="product-view.html">
-                            <h4>Women Scrub Leather</h4>
+                            <h4>{{$product_all->product_name}}</h4>
                         </a>
                         <div class="price mb-1 mt-2">
-                            <span class="org_price">$45.00</span>
+                            <span class="org_price"> {{$product_all->product_price}}</span>
                         </div>
                         <div class="rating">
                             <div class="d-flex align-items-center justify-content-start">
@@ -165,174 +168,10 @@
                         </a>
                     </div>
                 </div>
-                <div class="single_toparrival">
-                    <div class="topariv_img">
-                        <img loading="lazy" src="{{ asset('assets/images/shirt-2.png') }}" alt="product">
-                        <div class="prod_soh">
-                            <div class="adto_wish">
-                                <i class="icon-heart"></i>
-                            </div>
-                            <div class="qk_view open_quickview">
-                                <span><i class="las la-eye"></i></span>
-                                Quick View
-                            </div>
-                        </div>
-                    </div>
-                    <div class="topariv_cont">
-                        <a href="product-view.html">
-                            <h4>Men T-SHIRT ΚΑΝΟΝΙΚΗ </h4>
-                        </a>
-                        <div class="price mb-1 mt-2">
-                            <span class="org_price">$45.00</span>
-                        </div>
-                        <div class="rating">
-                            <div class="d-flex align-items-center justify-content-start">
-                                <div class="rating_star">
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                </div>
-                                <p class="rating_count mb-0">(150)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="full_atc_btn">
-                        <a href="{{ route('product_view') }}" class="href">
-                            <button>
-                                <span class="me-1"><i class="icon-cart"></i></span>
-                                add to cart
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <div class="single_toparrival">
-                    <div class="topariv_img">
-                        <img loading="lazy" src="{{ asset('assets/images/toy.png') }}" alt="product">
-                        <div class="prod_soh">
-                            <div class="adto_wish">
-                                <i class="icon-heart"></i>
-                            </div>
-                            <div class="qk_view open_quickview">
-                                <span><i class="las la-eye"></i></span>
-                                Quick View
-                            </div>
-                        </div>
-                    </div>
-                    <div class="topariv_cont">
-                        <a href="product-view.html">
-                            <h4>Playmobil Princess M</h4>
-                        </a>
-                        <div class="price mb-1 mt-2">
-                            <span class="org_price">$45.00</span>
-                        </div>
-                        <div class="rating">
-                            <div class="d-flex align-items-center justify-content-start">
-                                <div class="rating_star">
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                </div>
-                                <p class="rating_count mb-0">(150)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="full_atc_btn">
-                        <a href="{{ route('product_view') }}" class="href">
-                            <button>
-                                <span class="me-1"><i class="icon-cart"></i></span>
-                                add to cart
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <div class="single_toparrival">
-                    <div class="topariv_img">
-                        <img loading="lazy" src="{{ asset('assets/images/shoes-5.png') }}" alt="product">
-                        <div class="prod_soh">
-                            <div class="adto_wish">
-                                <i class="icon-heart"></i>
-                            </div>
-                            <div class="qk_view open_quickview">
-                                <span><i class="las la-eye"></i></span>
-                                Quick View
-                            </div>
-                        </div>
-                    </div>
-                    <div class="topariv_cont">
-                        <a href="product-view.html">
-                            <h4>Men s Running Shoes</h4>
-                        </a>
-                        <div class="price mb-1 mt-2">
-                            <span class="org_price">$45.00</span>
-                        </div>
-                        <div class="rating">
-                            <div class="d-flex align-items-center justify-content-start">
-                                <div class="rating_star">
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                </div>
-                                <p class="rating_count mb-0">(150)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="full_atc_btn">
-                        <a href="{{ route('product_view') }}" class="href">
-                            <button>
-                                <span class="me-1"><i class="icon-cart"></i></span>
-                                add to cart
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <div class="single_toparrival">
-                    <div class="topariv_img">
-                        <img loading="lazy" src="{{ asset('assets/images/shoes-3.png') }}" alt="product">
-                        <div class="prod_soh">
-                            <div class="adto_wish">
-                                <i class="icon-heart"></i>
-                            </div>
-                            <div class="qk_view open_quickview">
-                                <span><i class="las la-eye"></i></span>
-                                Quick View
-                            </div>
-                        </div>
-                    </div>
-                    <div class="topariv_cont">
-                        <a href="product-view.html">
-                            <h4>Women Hill Leather</h4>
-                        </a>
-                        <div class="price mb-1 mt-2">
-                            <span class="org_price">$45.00</span>
-                        </div>
-                        <div class="rating">
-                            <div class="d-flex align-items-center justify-content-start">
-                                <div class="rating_star">
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                    <span><i class="las la-star"></i></span>
-                                </div>
-                                <p class="rating_count mb-0">(150)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="full_atc_btn">
-                        <a href="{{ route('product_view') }}" class="href">
-                            <button>
-                                <span class="me-1"><i class="icon-cart"></i></span>
-                                add to cart
-                            </button>
-                        </a>
-                    </div>
-                </div>
+
+                @endforeach
+
+
             </div>
         </div>
     </div>
@@ -346,7 +185,7 @@
 
                 @foreach ($category as $category_name )
                 <div class="col-xl-2 col-md-3 col-sm-4 col-6">
-                    <a href="{{$category_name->id}}">
+                    <a href="{{route('shop_grid',$category_name->id)}}">
                         <div class="single_category_2">
                             <div class="cat2_img">
                                 <img loading="lazy" src="{{ asset('assets/images/shoes-5.png') }}" alt="">
